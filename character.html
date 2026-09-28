@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semua Karakter</title>
+    <link rel="stylesheet" href="navigation.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="search-container" onclick="openSearchModal()">
+            <span class="icon">🔍</span>
+            <input type="text" class="search-input" placeholder="Search..." readonly>
+            <span class="icon-close">×</span>
+        </div>
+        <button class="hamburger-btn" onclick="toggleMenu()">
+            <div class="line"></div><div class="line"></div><div class="line"></div>
+        </button>
+    </header>
+
+    <div id="pageOverlay" class="page-overlay" onclick="closeSidebar()"></div>
+
+    <aside id="sideMenu" class="side-menu">
+        <a href="home.html">🏠 Home</a>
+        <a href="character.html">👥 Character</a>
+        <a href="help.html">💬 Help</a>
+        <a href="profile.html">ℹ️ Profile</a>
+    </aside>
+
+    <!-- grid umaa -->
+    <main class="page-content">
+        <h2 style="margin-bottom: 25px; color: #333;">Daftar Seluruh Karakter</h2>
+        <div class="character-grid" id="characterGrid"></div>
+    </main>
+
+    <script src="character.js"></script>
+    <script src="js.js"></script>
+</body>
+</html>

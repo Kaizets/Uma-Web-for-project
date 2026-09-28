@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - Database Kuda</title>
+    <link rel="stylesheet" href="navigation.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="search-container" onclick="openSearchModal()">
+            <span class="icon">🔍</span>
+            <input type="text" class="search-input" placeholder="Search..." readonly>
+            <span class="icon-close">×</span>
+        </div>
+        <button class="hamburger-btn" onclick="toggleMenu()">
+            <div class="line"></div><div class="line"></div><div class="line"></div>
+        </button>
+    </header>
+
+    <!-- OVERLAY -->
+    <div id="pageOverlay" class="page-overlay" onclick="closeSidebar()"></div>
+
+    <!-- SIDEBAR MENU -->
+    <aside id="sideMenu" class="side-menu">
+        <a href="home.html">🏠 Home</a>
+        <a href="character.html">👥 Character</a>
+        <a href="help.html">💬 Help</a>
+        <a href="profile.html" style="background-color: #e2d9f3;">ℹ️ Profile</a>
+    </aside>
+
+    <!-- SEARCHINg -->
+    <div id="searchModal" class="search-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>🔍</span>
+                <input type="text" placeholder="Cari kuda..." id="realSearchInput" oninput="searchCharacter()">
+                <span class="close-modal" onclick="closeSearchModal()">×</span>
+            </div>
+            <div class="modal-body" id="searchResults">
+                <p>Mulai ketik untuk mencari...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- KONTEN PROFIL -->
+    <main class="page-content">
+        <div style="background-color: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); text-align: center;">
+            <div style="width: 100px; height: 100px; background-color: #7bc8d2; border-radius: 50%; margin: 0 auto 20px auto; display: flex; align-items: center; justify-content: center; font-size: 40px;">
+                Kuda
+            </div>
+            <h1 style="color: #6610f2; margin-bottom: 10px; font-size: 26px;">Uma fan-indeed~</h1>
+            <p style="color: #777; font-size: 14px; margin-bottom: 20px;">Versi 1.0.0 - Hosting Web</p>
+            <hr style="border: none; border-top: 1px solid #e0e0e0; margin-bottom: 20px;">
+            <p style="color: #555; line-height: 1.6; max-width: 600px; margin: 0 auto;">
+                lmao i just gonna troll. anyway i made this just for project, and fun thing ofc. this web contain html, css, js, and json. Enjoy!
+            </p>
+        </div>
+    </main>
+    
+    <script src="character.js"></script>
+    <script src="js.js"></script>
+</body>
+</html>

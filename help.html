@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bantuan - Database Kuda</title>
+    <link rel="stylesheet" href="navigation.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="search-container" onclick="openSearchModal()">
+            <span class="icon">🔍</span>
+            <input type="text" class="search-input" placeholder="Search..." readonly>
+            <span class="icon-close">×</span>
+        </div>
+        <button class="hamburger-btn" onclick="toggleMenu()">
+            <div class="line"></div><div class="line"></div><div class="line"></div>
+        </button>
+    </header>
+
+    <!-- OVERLAY -->
+    <div id="pageOverlay" class="page-overlay" onclick="closeSidebar()"></div>
+
+    <!-- z menu -->
+    <aside id="sideMenu" class="side-menu">
+        <a href="home.html">🏠 Home</a>
+        <a href="character.html">👥 Character</a>
+        <a href="help.html" style="background-color: #e2d9f3;">💬 Help</a>
+        <a href="profile.html">ℹ️ Profile</a>
+    </aside>
+
+    <!-- SEARCHi -->
+    <div id="searchModal" class="search-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>🔍</span>
+                <input type="text" placeholder="Cari kuda..." id="realSearchInput" oninput="searchCharacter()">
+                <span class="close-modal" onclick="closeSearchModal()">×</span>
+            </div>
+            <div class="modal-body" id="searchResults">
+                <p>Mulai ketik untuk mencari...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- help BANTUAN -->
+    <main class="page-content">
+        <div style="background-color: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+            <h1 style="color: #6610f2; margin-bottom: 15px; font-size: 26px;">Pusat Bantuan</h1>
+            <hr style="border: none; border-top: 1px solid #e0e0e0; margin-bottom: 20px;">
+            
+            <h3 style="color: #333; margin-bottom: 8px;">Bagaimana cara mencari karakter?</h3>
+            <p style="color: #555; line-height: 1.6; margin-bottom: 20px;">
+                Kamu bisa mengklik kolom pencarian (search bar) di bagian atas navbar kapan saja untuk membuka jendela pencarian cepat berdasarkan nama karakter.
+            </p>
+
+            <h3 style="color: #333; margin-bottom: 8px;">Bagaimana cara melihat daftar lengkap?</h3>
+            <p style="color: #555; line-height: 1.6; margin-bottom: 20px;">
+                Gunakan menu sidebar di pojok kanan atas lalu pilih opsi <strong>Character</strong> untuk melihat seluruh daftar database karakter yang tersedia.
+            </p>
+
+            <h3 style="color: #333; margin-bottom: 8px;">Bagaimana sistem urutan karakter bekerja?</h3>
+            <p style="color: #555; line-height: 1.6;">
+                Website ini menggunakan sistem ID hierarki otomatis. Semakin besar nomor ID suatu karakter, maka karakter tersebut dianggap sebagai karakter yang paling baru ditambahkan.
+            </p>
+        </div>
+    </main>
+    <script src="character.js"></script>
+    <script src="js.js"></script>
+</body>
+</html>

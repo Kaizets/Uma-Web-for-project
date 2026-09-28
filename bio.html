@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biografi Karakter</title>
+    <link rel="stylesheet" href="navigation.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="search-container" onclick="openSearchModal()">
+            <span class="icon">🔍</span>
+            <input type="text" class="search-input" placeholder="Search..." readonly>
+            <span class="icon-close">×</span>
+        </div>
+        <button class="hamburger-btn" onclick="toggleMenu()">
+            <div class="line"></div><div class="line"></div><div class="line"></div>
+        </button>
+    </header>
+
+    <div id="pageOverlay" class="page-overlay" onclick="closeSidebar()"></div>
+
+    <aside id="sideMenu" class="side-menu">
+        <a href="home.html">🏠 Home</a>
+        <a href="character.html">👥 Character</a>
+        <a href="help.html">💬 Help</a>
+        <a href="profile.html">ℹ️ Profile</a>
+    </aside>
+
+    <!-- seachin -->
+    <div id="searchModal" class="search-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>🔍</span>
+                <input type="text" placeholder="Cari kuda..." id="realSearchInput" oninput="searchCharacter()">
+                <span class="close-modal" onclick="closeSearchModal()">×</span>
+            </div>
+            <div class="modal-body" id="searchResults">
+                <p>Mulai ketik untuk mencari...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- KONTEN BIOGRAFI -->
+    <main class="page-content">
+        <div class="bio-container">
+            <div class="bio-text-area">
+                <h1 id="charName">Memuat...</h1>
+                <hr class="bio-divider">
+                <p id="charBio">Memuat biografi...</p>
+            </div>
+            <div class="bio-image-area">
+                <div class="image-placeholder" id="charImage">
+                    GAMBAR
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="character.js"></script>
+    <script src="js.js"></script>
+</body>
+</html>

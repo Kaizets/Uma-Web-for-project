@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Karakter Kuda</title>
+    <link rel="stylesheet" href="navigation.css">
+</head>
+<body>
+
+    <!-- navbar -->
+    <header class="navbar">
+        <div class="search-container" onclick="openSearchModal()">
+            <span class="icon">🔍</span>
+            <input type="text" class="search-input" placeholder="Search..." readonly>
+            <span class="icon-close">×</span>
+        </div>
+
+        <button class="hamburger-btn" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </button>
+    </header>
+
+    <!-- OVERLAY -->
+    <div id="pageOverlay" class="page-overlay" onclick="closeSidebar()"></div>
+
+    <!-- menu sidebar -->
+    <aside id="sideMenu" class="side-menu">
+        <a href="home.html">🏠 Home</a>
+        <a href="character.html">👥 Character</a>
+        <a href="help.html">💬 Help</a>
+        <a href="profile.html">ℹ️ Profile</a>
+    </aside>
+
+    <!-- searching -->
+    <div id="searchModal" class="search-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>🔍</span>
+                <input type="text" placeholder="Cari kuda..." id="realSearchInput" oninput="searchCharacter()">
+                <span class="close-modal" onclick="closeSearchModal()">×</span>
+            </div>
+            <div class="modal-body" id="searchResults">
+                <p>Mulai ketik untuk mencari...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- grid chara -->
+    <main class="page-content">
+        <div class="character-grid" id="homeCharacterGrid"></div>
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="character.html" style="display: inline-block; background-color: #6610f2; color: white; padding: 12px 25px; border-radius: 25px; text-decoration: none; font-weight: bold;">
+                More &rarr;
+            </a>
+        </div>
+    </main>
+
+    <script src="character.js"></script>
+    <script src="js.js"></script>
+</body>
+</html>
